@@ -1,0 +1,297 @@
+<!doctype html>
+
+<html class="no-js" lang=""> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WAS Media Login</title>
+    <meta name="description" content=" WAS Media">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/images/was-logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="/css/public.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <style>
+        /* Responsive Login Page Styles */
+
+        :root {
+            --primary-color: #2c5dc7;
+            --secondary-color: #6c757d;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--background-color);
+        }
+
+        .sufee-login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 15px;
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 450px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .login-content {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 0 15px;
+        }
+
+        .login-logo {
+            text-align: center;
+            /* margin-bottom: 30px; */
+        }
+
+        .login-logo img {
+            max-width: 150px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .login-form {
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            height: 45px;
+            padding: 10px 15px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+        }
+
+        .checkbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .checkbox label {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .checkbox input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .checkbox a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .btn-success {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 16px;
+            background-color: var(--primary-color);
+            border: none;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background-color: #122fb3;
+        }
+
+        .toast-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 300px;
+            /* Increased width */
+            display: none;
+            /* Hidden by default */
+            transition: opacity 0.5s ease-out;
+            /* Smooth fade effect */
+        }
+
+        .toast-message .alert {
+            background-color: #cf0303;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            position: relative;
+            /* For positioning the close button */
+            overflow: hidden;
+            /* To hide timer overflow */
+        }
+
+        .toast-message .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .toast-message .timer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background-color: rgb(250, 250, 250);
+            width: 100%;
+            animation: timer 3s linear forwards;
+            /* Timer animation */
+        }
+
+        @keyframes timer {
+            from {
+                width: 100%;
+            }
+
+            to {
+                width: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+
+
+    <div class="sufee-login d-flex align-content-center flex-wrap">
+        <div class="container">
+
+
+            <div class="login-content">
+                <div id="message" class="toast-message">
+                    <% if (message) { %>
+                        <div class="alert">
+                            <span class="close-btn" onclick="hideToast()">&#10005;</span>
+                            <%= message %>
+                                <div class="timer-bar"></div>
+                        </div>
+                        <% } %>
+                </div>
+
+
+                <div class="login-logo">
+                    <a href="#">
+                        <img class="align-content" src="/images/was-logo.png" alt="">
+
+                    </a>
+                </div>
+                <div class="login-form">
+                    <form method="POST" action="/admin/login">
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" name="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember Me
+                            </label>
+                            <label class="pull-right">
+                                <a href="#">Forgotten Password?</a>
+                            </label>
+
+                        </div>
+                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="/js/all.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const messageDiv = document.getElementById('message');
+
+            // Function to hide toast
+            function hideToast() {
+                messageDiv.style.opacity = '1'; // Reset opacity
+                let fadeEffect = setInterval(() => {
+                    if (!messageDiv.style.opacity) {
+                        messageDiv.style.opacity = '1';
+                    }
+                    if (messageDiv.style.opacity > 0) {
+                        messageDiv.style.opacity -= 0.1; // Gradually reduce opacity
+                    } else {
+                        clearInterval(fadeEffect);
+                        messageDiv.style.display = 'none'; // Hide completely
+                    }
+                }, 50);
+            }
+
+            // Check if there's a message
+            if (messageDiv && messageDiv.innerHTML.trim() !== '') {
+                messageDiv.style.display = 'block'; // Show the message
+
+                // Automatically hide after 3 seconds
+                setTimeout(() => {
+                    hideToast();
+                }, 3000); // Delay for 3 seconds
+            }
+
+            window.hideToast = hideToast;
+        });
+
+    </script>
+
+</body>
+
+</html>

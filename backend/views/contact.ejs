@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>WAS</title>
+
+  <!-- slider stylesheet -->
+  <link rel="shortcut icon" href="/images/was-logo.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3" id="navbar">
+          <a class="navbar-brand" href="/">
+            <span>
+              <img class="brand-logo" src="./images/was-logo.png" alt="">
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <% navbarPages.forEach(page=> { %>
+                  <% if (page.parentId===null && page.order===0) { %>
+                    <!-- Main page (parent page) -->
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="/<%= page.urlSlug %>">
+                        <%= page.title %>
+                      </a>
+
+                      <% if (page.subPages && page.subPages.length> 0) { %>
+                        <ul class="dropdown-menu">
+                          <% page.subPages.forEach(subPage=> { %>
+                            <li>
+                              <a class="dropdown-item" href="/<%= subPage.urlSlug %>">
+                                <%= subPage.title %>
+                              </a>
+                            </li>
+                            <% }); %>
+                        </ul>
+                        <% } %>
+                    </li>
+
+                    <% } %>
+                      <% }); %>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/contact">Contact us</a>
+                        </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+
+      <div class="heading_container">
+        <h2>
+          Request A Call Back
+        </h2>
+      </div>
+      <div class="row contact-section-content mt-4">
+        <div class="col-lg-6 map-container" data-aos="fade-up" data-aos-delay="300">
+          <!-- Embed Google Map with updated location from the new URL -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1765.9625840525828!2d85.3403874!3d27.7375881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190011545255:0xca8e5c9afa20eaeb!2sP8QR%2B25J%2C%20Ring%20Rd%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1717907677167"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6 contact-form-container">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div>
+                <input type="text" id="name" placeholder="Full Name" required />
+              </div>
+              <div>
+                <input type="text" id="phone" placeholder="Phone Number" required />
+              </div>
+              <div>
+                <input type="email" id="email" placeholder="Email Address" required />
+              </div>
+              <div>
+                <input type="text" id="message" placeholder="Message" class="input_message" required />
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn_on-hover">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h2>
+              <%= info && info.Name ? info.Name : 'examplename' %>
+            </h2>
+            <div>
+              <div class="img-box">
+                <img src="images/location-white.png" width="18px" alt="">
+              </div>
+              <p>
+                <%= info && info.location ? info.location : 'examplelocation' %>
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/telephone-white.png" width="12px" alt="">
+              </div>
+              <p>
+                +977 <%= info && info.phoneNumber ? info.phoneNumber : '1234567890' %>
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/envelope-white.png" width="18px" alt="">
+              </div>
+              <p>
+                <%= info && info.email ? info.email : 'example@gamil.com' %>
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Services
+            </h5>
+            <div class="d-flex flex-column align-items-start">
+              <p><i class="fa-thin fa-greater-than mr-2"></i>
+                <span>Web Development</span>
+              </p>
+              <p><i class="fa-thin fa-greater-than mr-2"></i>
+                <span>App Development</span>
+              </p>
+              <p><i class="fa-thin fa-greater-than mr-2"></i>
+                <span>Social Media Marketing</span>
+              </p>
+              <p><i class="fa-thin fa-greater-than mr-2"></i>
+                <span>TV Advertising</span>
+              </p>
+              <p><i class="fa-thin fa-greater-than mr-2"></i>
+                <span>Digital Marketing</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              Quick Links
+            </h5>
+            <% footerPages.forEach(page=> { %>
+              <p class="info_contact_bottom"><i class="fa-thin fa-greater-than mr-2"></i><a href="/<%= page.urlSlug %>">
+                  <%= page.title %>
+                </a></p>
+              <% }); %>
+                <p class="info_contact_bottom"><i class="fa-thin fa-greater-than mr-2"></i><a
+                    href="/gallery">Gallery</a></p>
+                <p class="info_contact_bottom"><i class="fa-thin fa-greater-than mr-2"></i><a href="/faq">FAQs</a>
+                </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="">
+              <input class="rounded" type="email" placeholder="Enter your email">
+              <button class="rounded">
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box">
+              <!-- when i was filling the form for social-links in admin panel i was only allowed link with www.example@gamil.com so i added https:// to complete the href change accordingly -->
+              <a href="https://<%= info && info.facebook ? info.facebook : 'www.facebook.com' %>">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+
+              <a href="https://<%= info && info.instagram ? info.instagram : 'www.instagram.com' %>/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="https://<%= info && info.twitter ? info.twitter : 'www.twitter.com' %>/">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+
+              <a href="https://<%= info && info.linkedin ? info.linkedin : 'www.linkedin.com' %>">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+              <a href="https://<%= info && info.youtube ? info.youtube : 'www.youtube.com' %>">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; <span class="footer-date"></span> All Rights Reserved By <span>W.A.S</span> Media
+      Agency
+    </p>
+
+    <span id="backToTop" class="back-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </span>
+
+
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- owl carousel script 
+  -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+
+    // Set the year in the footer-date element
+    document.querySelector('.footer-date').textContent = currentYear;
+    // Get the button
+    let backToTopBtn = document.getElementById('backToTop');
+
+    // When the user scrolls down 200px from the top of the document, show the button
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    // When the user clicks the button, scroll to the top of the document
+    backToTopBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // This makes the scroll smooth
+      });
+    };
+
+    document.getElementById('contactForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const formData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+        const result = await response.json();
+        if (response.ok) {
+          alert('Your message has been sent!');
+        } else {
+          alert('There was an error sending your message.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to send message. Please try again later.', error);
+      }
+    });
+
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+
+</html>

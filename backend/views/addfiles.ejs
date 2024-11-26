@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="/images/was-logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  <meta name="csrf-token" content="NsLCyQVTyMPEh7KnVsmqHWbD67ixNGRAYgSJbDD0">
+
+  <title>WAS Media Marketing </title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <link rel="stylesheet" type="text/css" href="/css/public.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <style>
+    .card {
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    .card-header {
+      padding: 1rem 1.5rem;
+    }
+
+    .table th {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-outline-primary {
+      --bs-btn-hover-bg: rgba(13, 110, 253, 0.1);
+      --bs-btn-hover-border-color: var(--bs-primary);
+      --bs-btn-hover-color: var(--bs-primary);
+    }
+
+    .btn-outline-danger {
+      --bs-btn-hover-bg: rgba(220, 53, 69, 0.1);
+      --bs-btn-hover-border-color: var(--bs-danger);
+      --bs-btn-hover-color: var(--bs-danger);
+    }
+
+    .form-control {
+      border-radius: 0.375rem;
+    }
+
+    .form-control:focus {
+      border-color: #86b7fe;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+    .table-responsive {
+      border-radius: 0.375rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <!-- header -->
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="/admin/dashboard" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>WAS</b>T</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg">WAS Media Marketing</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li class="dropdown messages-menu">
+              <a href="">
+                <span class="hidden-xs">Tue, Sep 17, 2024 1:08 PM</span>
+              </a>
+            </li>
+            <li class="dropdown messages-menu">
+              <span><a href="https://WAS Media Marketing.org/admin/update-at" class="btn btn-default"
+                  onClick="return confirm('Are you sure you want to update?')" style="margin-top:3mm"> Update
+                </a></span>
+
+            </li>
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/images/c-1.png" class="user-image" alt="User Image">
+                <span class="hidden-xs">admin</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <img src="/images/c-1.png" class="img-circle" alt="User Image">
+                  <p>
+                    WAS Media Marketing
+                    <small><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="95fcfbf3fad5fbf2ece0fbf2fbf0bbfae7f2">[email&#160;protected]</a></small>
+                  </p>
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/admin/logout" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="/images/c-1.png" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left info">
+            <p>WAS Media Marketing</p>
+            <a href=""><i class="fa fa-circle text-success"></i> Online</a>
+          </div>
+        </div>
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a href="/admin/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            </a>
+
+          </li>
+          <li class="">
+            <a href="/admin/enquiry">
+              <i class="fa fa-check-circle"></i> <span>General Inquiry</span>
+            </a>
+          </li>
+
+          <li class="">
+            <a href="/admin/page">
+              <i class="fa fa-check-circle"></i> <span>Pages</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="/admin/file">
+              <i class="fa fa-check-circle"></i> <span>Files</span>
+            </a>
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/admin/slider"><i class="fa fa-exchange"></i>Slider</a>
+          </li>
+
+          <li class="">
+            <a href="/admin/faq"><i class="fa fa-question-circle"></i> FAQ</a>
+          </li>
+
+
+
+
+          <li class="">
+            <a href="/admin/social-link">
+              <i class="fa fa-link"></i> <span>Social Links</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="/admin/navbar">
+              <i class="fa fa-cog"></i> <span>Navbar</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="/admin/subscriber">
+              <i class="fa fa-cog"></i> <span>NewsLetter</span>
+            </a>
+          </li>
+
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Files
+          <small>The description of Files can be changed here. </small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="/admin/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li><a href="/admin/faq"> FAQ</a></li>
+          <li class="active">Add FAQ</li>
+        </ol>
+      </section>
+
+      <!-- Main content -->
+      <!-- this is alos the page we need to haev a add file and add image button through which we can upload the files from our computer to admn panel -->
+      <section class="content">
+        <!-- Main row -->
+        <div class="container-fluid py-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm">
+                <div class="card-header bg-white border-bottom">
+                  <h3 class="card-title h5 mb-0 text-primary">Manage Images and Files</h3>
+                </div>
+
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <!-- Image Upload Form -->
+                    <div class="col-md-6">
+                      <div class="p-4 border rounded-3 bg-light">
+                        <form id="uploadForm" action="/admin/image/upload" method="POST" enctype="multipart/form-data">
+                          <h6 class="mb-3 text-secondary">Upload Image</h6>
+                          <div class="mb-3" style="margin-bottom: 10px;">
+                            <label for="image" class="form-label">Choose an Image:</label>
+                            <input type="file" name="image" id="image" accept="image/*" class="form-control">
+                          </div>
+                          <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-upload me-2" style="margin-right: 10px;"></i>Upload Image
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+
+                    <!-- File Upload Form -->
+                    <div class="col-md-6">
+                      <div class="p-4 border rounded-3 bg-light">
+                        <form id="fileUploadForm" action="/admin/Files/upload" method="POST"
+                          enctype="multipart/form-data">
+                          <h6 class="mb-3 text-secondary">Upload File</h6>
+                          <div class="mb-3" style="margin-bottom: 10px;">
+                            <label for="file" class="form-label">Choose a File:</label>
+                            <input type="file" name="file" id="file" class="form-control">
+                          </div>
+                          <button type="submit" id="fileSubmit" class="btn btn-primary">
+                            <i class="fas fa-upload me-2" style="margin-right: 10px;"></i>Upload File
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Images Section -->
+                  <div class="mb-4">
+                    <h5 class="mb-3 text-secondary">Images</h5>
+                    <div class="table-responsive">
+                      <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                          <tr>
+                            <th scope="col" class="text-nowrap">ID</th>
+                            <th scope="col">Image</th>
+                            <th scope="col" class="text-end">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% imageMetadata.forEach(image=> { %>
+                            <tr>
+                              <td class="text-nowrap">~</td>
+                              <td>
+                                <img src="<%= image.url %>" alt="Image" class="img-thumbnail" style="max-width: 100px;">
+                              </td>
+                              <td class="text-end">
+
+                                <form class="button-form" method="post" action="/admin/image/<%= image.id %>">
+                                  <input type="submit" value="Delete" class="btn btn-danger btn-block pull-right"
+                                    onclick="return confirm('Are you sure you want to delete?');">
+                                </form>
+                              </td>
+                            </tr>
+                            <% }); %>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <!-- Files Section -->
+                  <div>
+                    <h5 class="mb-3 text-secondary">Files</h5>
+                    <div class="table-responsive">
+                      <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                          <tr>
+                            <th scope="col">Filename</th>
+                            <th scope="col">Link</th>
+                            <th scope="col">Content Type</th>
+                            <th scope="col" class="text-end">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% fileMetadata.forEach(file=> { %>
+                            <tr>
+                              <td class="text-nowrap">
+                                <%= file.filename %>
+                              </td>
+                              <td>
+                                <a href="<%= file.url %>" target="_blank" class="btn btn-sm btn-outline-secondary">
+                                  <i class="fas fa-external-link-alt me-1"></i>View Content
+                                </a>
+                              </td>
+                              <td><small class="text-muted">
+                                  <%= file.contentType %>
+                                </small></td>
+                              <td class="text-end">
+
+                                <form class="button-form" method="post" action="/admin/Files/<%= file.id %>">
+                                  <input type="submit" value="Delete" class="btn btn-danger btn-block pull-right"
+                                    onclick="return confirm('Are you sure you want to delete?');">
+                                </form>
+                              </td>
+                            </tr>
+                            <% }); %>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- /.content -->
+
+
+    </div><!-- /.content-wrapper -->
+
+    <!-- footer -->
+    <footer class="main-footer">
+
+      <strong>Copyright &copy;
+
+        <strong>
+    </footer>
+  </div><!-- ./wrapper -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="all.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+  <script>
+    // Image upload validation and success message
+    document.getElementById('uploadForm').addEventListener('submit', function (event) {
+      event.preventDefault();  // Prevent form submission initially
+
+      const imageInput = document.getElementById('image');
+      const imageFile = imageInput.files[0];
+      const validImageTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/webp'];
+
+      if (!imageFile) {
+        // If no image is selected
+        Toastify({
+          text: "Please select an image to upload.",
+          duration: 3000,
+          gravity: "top",
+          close: true,
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "linear-gradient(to right, #da351a, #ddc913)",
+          }
+        }).showToast();
+        return;
+      }
+
+      if (!validImageTypes.includes(imageFile.type)) {
+        // Invalid image file type
+        Toastify({
+          text: "Invalid image file type! Please upload a PNG, JPG, JPEG, or WebP image.",
+          duration: 3000,
+          gravity: "top",
+          close: true,
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "linear-gradient(to right, #e3391c, #770505)",
+          }
+        }).showToast();
+        return;
+      }
+
+      // Proceed with form submission and show success message
+      this.submit();  // Submit the form after successful validation
+      Toastify({
+        text: "Image uploaded successfully!",
+        duration: 3000,
+        gravity: "top", // `top` or `bottom`
+        close: true,
+        position: "right",
+        stopOnFocus: true, // `left`, `center`, or `right`
+        style: {
+          background: "linear-gradient(to right, #1c66e3, #051347)",
+        }
+      }).showToast();
+    });
+
+    // File upload validation and success message
+    const allowedFileTypes = [
+      'text/css', 'text/plain', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'application/pdf', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      'application/vnd.ms-powerpoint', 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+      'text/html', 'application/javascript', 'text/javascript'
+    ];
+
+    document.getElementById('fileSubmit').addEventListener('click', function (event) {
+      const fileInput = document.getElementById('file');
+      const file = fileInput.files[0];
+
+      if (!file) {
+        // If no file is selected
+        Toastify({
+          text: "Please select a file to upload.",
+          duration: 3000,
+          gravity: "top",
+          close: true,
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "linear-gradient(to right, #da351a, #ddc913)",
+          }
+        }).showToast();
+        return;
+      }
+
+      if (!allowedFileTypes.includes(file.type)) {
+        // Invalid file type
+        event.preventDefault();  // Prevent form submission
+        Toastify({
+          text: "Invalid file type! Please select a valid file type.",
+          duration: 3000,
+          gravity: "top",
+          close: true,
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "linear-gradient(to right, #e3391c, #770505)",
+          }
+        }).showToast();
+        return;
+      }
+
+      // Proceed with form submission and show success message
+      Toastify({
+        text: "File uploaded successfully!",
+        duration: 3000,
+        gravity: "top",
+        close: true,
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #1c66e3, #051347)",
+        }
+      }).showToast();
+      // If needed, submit the form after successful validation
+      document.getElementById('uploadForm').submit();
+    });
+  </script>
+
+</body>
+
+</html>

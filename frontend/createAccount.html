@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS */
+
+        /* Image adjustments */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Center the form on larger screens */
+        .container {
+            max-width: 960px;
+        }
+
+        /* Style for buttons */
+        .btn-lg {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        /* Form Divider Styling */
+        .divider {
+            position: relative;
+            text-align: center;
+            font-weight: 600;
+            color: #6c757d;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background-color: #dee2e6;
+        }
+
+        .divider::before {
+            left: 0;
+        }
+
+        .divider::after {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6 col-lg-5 mb-4 mb-lg-0">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                        class="img-fluid" alt="Create Account Image">
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <form>
+                        <!-- First Name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="firstName" class="form-control form-control-lg"
+                                placeholder="First Name" />
+                        </div>
+
+                        <!-- Last Name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="lastName" class="form-control form-control-lg"
+                                placeholder="Last Name" />
+                        </div>
+
+                        <!-- Phone input -->
+                        <div class="form-outline mb-4">
+                            <input type="tel" id="phone" class="form-control form-control-lg" placeholder="Phone" />
+                        </div>
+
+                        <!-- Address input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="address" class="form-control form-control-lg"
+                                placeholder="Address" />
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="password" class="form-control form-control-lg"
+                                placeholder="Password" />
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
+
+                        <!-- Divider -->
+                        <div class="divider my-4">OR</div>
+
+                        <!-- Social login buttons -->
+                        <a class="btn btn-primary btn-lg" style="background-color: #3b5998" href="#!" role="button">
+                            <i class="fab fa-facebook-f me-2"></i>Sign up with Facebook
+                        </a>
+                        <a class="btn btn-primary btn-lg" style="background-color: #55acee" href="#!" role="button">
+                            <i class="fab fa-twitter me-2"></i>Sign up with Twitter
+                        </a>
+
+                        <!-- Already have an account link -->
+                        <div class="text-center mt-4">
+                            <p class="mb-0">Already have an account? <a href="login.html" class="text-primary">Login</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
